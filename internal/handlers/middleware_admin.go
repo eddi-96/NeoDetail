@@ -8,8 +8,8 @@ import (
 
 func AdminOnly() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		val, err := c.Cookie("admin")
-		if err != nil || val != "1" {
+		role := c.GetString("role")
+		if role != "admin" {
 			c.Redirect(http.StatusFound, "/admin")
 			c.Abort()
 			return

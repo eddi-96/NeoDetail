@@ -11,17 +11,19 @@
     <h1 class="title">Ingreso Admin</h1>
 
     <div class="panel">
-      <label>Email</label>
-      <input id="adminUser" class="input" value="admin@uide.com"/>
+      <form action="/admin/login" method="POST">
+        <label>Email</label>
+        <input name="usuario" class="input" value="admin@uide.com"/>
 
-      <label>Password</label>
-      <input id="adminPass" class="input" type="password" value="1234"/>
+        <label>Password</label>
+        <input name="password" class="input" type="password" value="1234"/>
 
-      <button class="btn" id="loginBtn">Entrar</button>
-      <p class="hint">Admin por defecto: <b>UIDE / 1234</b> (email: admin@uide.com)</p>
+        <button class="btn" type="submit">Entrar</button>
+        <p class="hint">
+          Admin por defecto: <b>UIDE / 1234</b> (email: admin@uide.com)
+        </p>
+      </form>
     </div>
   </main>
-
-  <script src="/static/js/admin_login.js"></script>
 </body>
 </html>

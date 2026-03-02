@@ -28,6 +28,7 @@ func main() {
 
 	// 🔹 Crear router
 	r := gin.Default()
+	r.Use(handlers.LoadSession())
 
 	// ===============================
 	// ✅ WEB (templates + estáticos)

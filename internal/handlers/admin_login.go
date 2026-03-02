@@ -24,7 +24,8 @@ func AdminLoginPost(c *gin.Context) {
 		return
 	}
 
-	// cookie simple (para tarea)
-	c.SetCookie("admin", "1", 3600, "/", "", false, true)
+	// ✅ COOKIE CORRECTA
+	c.SetCookie("role", "admin", 3600, "/", "", false, true)
+
 	c.Redirect(http.StatusFound, "/admin/productos")
 }
