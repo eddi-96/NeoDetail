@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>NeoDetail | Tienda</title>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">NeoDetail</div>
+
+    <input id="buscador" class="search" placeholder="Buscar productos..." />
+
+    <nav class="nav">
+      <a href="/tienda">Tienda</a>
+      <a href="/carrito">Carrito (<span id="cartCount">0</span>)</a>
+      <a href="/admin">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="title">Productos</h1>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <script src="/static/js/tienda.js"></script>
+</body>
+</html>
