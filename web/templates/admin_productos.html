@@ -19,22 +19,23 @@
     <h1 class="title">Crear producto</h1>
 
     <div class="panel">
-      <div class="formgrid">
-        <input id="nombre" class="input" placeholder="Nombre"/>
-        <input id="precio" class="input" placeholder="Precio" type="number" step="0.01"/>
-        <input id="stock" class="input" placeholder="Stock" type="number"/>
-        <input id="imagen_url" class="input" placeholder="Imagen URL (opcional)"/>
-        <textarea id="descripcion" class="input" placeholder="Descripción"></textarea>
-      </div>
-
-      <button class="btn" id="crearBtn">Crear</button>
-      <p id="msg" class="hint"></p>
+  <form action="/admin/productos/crear" method="POST">
+    <div class="formgrid">
+      <input name="nombre" class="input" placeholder="Nombre" required/>
+      <input name="precio" class="input" placeholder="Precio" type="number" step="0.01" required/>
+      <input name="stock" class="input" placeholder="Stock" type="number" required/>
+      <input name="imagen_url" class="input" placeholder="Imagen URL (opcional)"/>
+      <textarea name="descripcion" class="input" placeholder="Descripción"></textarea>
     </div>
+
+    <button class="btn" type="submit">Crear</button>
+  </form>
+</div>
 
     <h2 class="subtitle">Productos actuales</h2>
     <div id="lista" class="grid"></div>
   </main>
 
-  <script src="/static/js/admin_productos.js"></script>
+
 </body>
 </html>
